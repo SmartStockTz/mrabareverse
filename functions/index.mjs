@@ -8,7 +8,6 @@ export const reverseAPI = {
     onRequest: (req, res) => {
         const host = req?.params?._host??'';
         const path = req?.query?._path??'';
-        // console.log(`https://185.216.203.193${path}`);
         proxy.web(req, res, {
             changeOrigin: true,
             followRedirects: true,
