@@ -11,7 +11,7 @@ export const reverseAPI = {
         const path = req?.query?._path??'';
         console.log(host, '----', path);
         proxy.web(req, res, {
-            /*changeOrigin: true,*/
+            changeOrigin: true,
             target: `127.0.0.1${path}`,
             headers: {'Host': host}
         }, function (e) {
