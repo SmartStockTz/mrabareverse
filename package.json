@@ -1,0 +1,11 @@
+{
+  "name": "functions",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"no test\""
+  },
+  "dependencies": {
+    "http-proxy": "^1.18.1"
+  },
+  "private": true
+}
