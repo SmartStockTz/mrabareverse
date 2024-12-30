@@ -11,15 +11,15 @@ export const reverseAPI = {
         const path = req?.query?._path??'';
         console.log(host, '----', path);
         req.headers.host = host;
-        // res.redirect(`https://127.0.0.1${path}`);
-        proxy.web(req, res, {
-            changeOrigin: true,
-            target: `127.0.0.1${path}`,
-            // headers: {'Host': host}
-        }, function (e) {
-            console.log(e);
-            res.status(400).send(e);
-            proxy.close();
-        });
+        res.redirect(`https://127.0.0.1${path}`);
+        // proxy.web(req, res, {
+        //     changeOrigin: true,
+        //     target: `127.0.0.1${path}`,
+        //     // headers: {'Host': host}
+        // }, function (e) {
+        //     console.log(e);
+        //     res.status(400).send(e);
+        //     proxy.close();
+        // });
     }
 }
