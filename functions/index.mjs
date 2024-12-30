@@ -15,6 +15,7 @@ export const reverseAPI = {
             target: `127.0.0.1${path}`,
             headers: {'Host': host}
         }, function (e) {
+            console.log(e);
             res.status(400).send(e);
             proxy.close();
         });
