@@ -6,6 +6,7 @@ export const reverseAPI = {
     method: 'ALL',
     path: '/:_host',
     onRequest: (req, res) => {
+        process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
         const host = req?.params?._host??'';
         const path = req?.query?._path??'';
         console.log(host, '----', path);
