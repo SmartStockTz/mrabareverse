@@ -13,7 +13,7 @@ export const reverseAPI = {
             changeOrigin: true,
             followRedirects: true,
             ignorePath: true,
-            target: `https://185.216.203.193${path}`,
+            target: `https://127.0.0.1${path}`,
             secure: false,
             headers: {'Host':host},
         }, function (e) {
