@@ -2,7 +2,7 @@
   "name": "functions",
   "version": "1.0.0",
   "scripts": {
-    "start": "bfast fs serve -p 3434",
+    "start": "node functions/index.mjs",
     "test": "echo \"no test\""
   },
   "dependencies": {
